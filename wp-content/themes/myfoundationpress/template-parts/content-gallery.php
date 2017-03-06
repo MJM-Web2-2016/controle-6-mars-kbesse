@@ -23,22 +23,37 @@
 				</div>
 			<?php endif; ?></a></h2>
 		</header>
-		<div class="row">
-			<div class="large-4 columns text-center">	</div>
-			<div class="large-4 columns text-center">
-				<h2><img src="<?php the_field('profil');?>" alt="" /></h2>
+		<div class="row contenu-profil">
+
+			<div class="large-12 columns text-center">
+				<h2><img src="<?php the_field('profil');?>" class="image-profil" alt="" width="75px"/></h2>
+
+
+				<style media="screen">
+				.contenu-profil {
+					position:relative;
+				}
+					.image-profil {
+						left:50%;
+						height:75px;
+						margin-left:-40px;
+						position:absolute;
+						border-radius: 50px;
+						top:-50px;
+					}
+				</style>
 			</div>
-			<div class="large-4 columns text-center">	</div>
+
 		</div>
 		<div class="row">
-			<div class="large-6 columns text-center">
-				<h3>Vues</h3>
+			<div class="large-6 medium-6 columns text-center">
+				<h3><img src="wp-content/themes/myfoundationpress/assets/images/view.svg" width="50px" alt="" /></h3>
 				<p>
 					<?php the_field('vues');?>
 				</p>
 			</div>
-			<div class="large-6 columns text-center">
-				<h3>Like</h3>
+			<div class="large-6 medium-6 columns text-center">
+				<h3><img src="wp-content/themes/myfoundationpress/assets/images/like.svg" width="42px" alt="" /></h3>
 				<p>
 					<?php the_field('like');?>
 				</p>
